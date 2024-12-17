@@ -131,6 +131,20 @@ src="https://www.facebook.com/tr?id=551691891181920&ev=PageView&noscript=1"
       }
     }, 1000); // Update every 1 second
   </script>
+  <script>
+    document.addEventListener('contextmenu', function (e) {
+    e.preventDefault(); // Prevent the default right-click menu
+    alert('Right-click is disabled on this webpage.');
+});
+
+document.addEventListener("keydown", function(event) {
+        // Check if Ctrl key is pressed along with 'U'
+        if (event.ctrlKey && event.key === "u") {
+            event.preventDefault(); // Prevent the default action
+            alert("View source is disabled!"); // Optional alert message
+        }
+    });
+</script>
 </body>
 
 </html>
